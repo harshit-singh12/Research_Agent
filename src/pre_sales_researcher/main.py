@@ -5,6 +5,13 @@ from crews.companyresearcher.companyresearcher import Companyresearcher
 from crews.peoplesearcher.peoplesearcher import PeopleSearcher
 from pydantic import BaseModel
 
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except (ImportError, KeyError):
+    pass
+
 class main_research_flow():
     def startCrew(self, company_name: Optional[str], person_name: Optional[str]):
         Research_agent_results = []
