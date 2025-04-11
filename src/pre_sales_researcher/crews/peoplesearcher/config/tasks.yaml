@@ -1,0 +1,45 @@
+research_task:
+  description: >
+    Conduct a thorough research about {person_name} across various internet sources.
+    {company_name} is the current company of {person_name}, focus on finding information related to their role
+    and experience at that company. Search for their professional background, achievements,
+    current position, skills, and notable projects. Research public news articles, press
+    releases, and media coverage featuring {person_name}. Look for awards, recognitions,
+    and public speaking engagements with dates.
+    Don't make assumptions, if you don't find information about {person_name} at {company_name} then it doesn't mean they are not working there.
+    You can cross verify the {company_name} might be a previous company. If you didn't find information about {person_name} at {company_name} then 
+    simply say you are unable to find information about {person_name} at {company_name} but don't make assumptions.
+  expected_output: >
+    A comprehensive list of key findings about {person_name}, including:
+    - Current and past professional roles
+    - Educational background
+    - Skills and expertise
+    - Notable achievements and awards
+    - Public news coverage and media mentions
+    - Published articles or interviews
+    - Speaking engagements and conference appearances
+    - Company-specific contributions
+    - Online presence and thought leadership
+    - Recent activities and updates
+  agent: researcher
+
+reporting_task:
+  description: >
+    Create a comprehensive professional profile report for {person_name} by synthesizing
+    all gathered information. Structure the report to highlight key professional achievements,
+    expertise, and public recognition. Include relevant news coverage and media presence.
+    Ensure the narrative flows logically and maintains professional ethics and privacy
+    considerations. If any information is not found about {person_name} leave it blank or just say not found.
+  expected_output: >
+    A detailed, well-structured report in markdown format covering:
+    - Executive Summary
+    - Professional Background
+    - Current Role and Responsibilities
+    - Key Achievements and Awards
+    - Media Presence and Public Recognition
+    - Published Works and Thought Leadership
+    - Speaking Engagements and Public Appearances
+    - Company-Specific Analysis (if applicable)
+    - Professional Network Overview
+    - Additional Insights and Recommendations
+  agent: reporting_analyst

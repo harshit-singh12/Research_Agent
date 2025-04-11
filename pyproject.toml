@@ -1,0 +1,21 @@
+[project]
+name = "pre_sales_researcher"
+version = "0.1.0"
+description = "Pre_Sales_Researcher using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.114.0,<1.0.0",
+]
+
+[project.scripts]
+kickoff = "pre_sales_researcher.main:kickoff"
+run_crew = "pre_sales_researcher.main:kickoff"
+plot = "pre_sales_researcher.main:plot"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "flow"

@@ -1,0 +1,6 @@
+crewai
+crewai_tools
+load_dotenv
+streamlit
+pysqlite3-binary
+boto3
