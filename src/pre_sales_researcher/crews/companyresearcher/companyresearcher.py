@@ -2,7 +2,7 @@ import os
 from crewai import Agent, Crew, Process, Task, LLM
 from crewai.project import CrewBase, agent, crew, task
 from crewai_tools import SerperDevTool, ScrapeWebsiteTool
-from pre_sales_researcher.tools.custom_tool import LinkedInJobSearchTool
+from tools.custom_tool import LinkedInJobSearchTool
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -77,7 +77,7 @@ class Companyresearcher:
     def reporting_task(self) -> Task:
         return Task(
             config=self.tasks_config['reporting_task'],
-            output_file= '{company_name}_research.md'
+            output_file= 'Company_research.md'
         )
 
     @crew

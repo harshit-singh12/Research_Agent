@@ -1,13 +1,15 @@
 #!/usr/bin/env python
 from typing import Dict, Optional
 from crewai.flow import Flow, listen, start, router
-from src.pre_sales_researcher.crews.companyresearcher.companyresearcher import Companyresearcher
-from src.pre_sales_researcher.crews.peoplesearcher.peoplesearcher import PeopleSearcher
+from crews.companyresearcher.companyresearcher import Companyresearcher
+from crews.peoplesearcher.peoplesearcher import PeopleSearcher
 from pydantic import BaseModel
 
 class main_research_flow():
-    def startCrew(company_name: Optional[str], person_name: Optional[str]):
+    def startCrew(self, company_name: Optional[str], person_name: Optional[str]):
         Research_agent_results = []
+        company_name = str(company_name)
+        person_name = str(person_name)
         inputs = {
             'company_name': company_name.strip(),
             'person_name': person_name.strip()
@@ -86,6 +88,6 @@ def plot():
 if __name__ == "__main__":
     #inputs = {"company_name": "LatentBridge", "person_name": "Hema Gandhi"}
     RouterFlow().kickoff()'''
-
+'''
 if __name__ == "__main__":
-    main_research_flow().startCrew(company_name="LatentBridge", person_name="Hema Gandhi")
+    main_research_flow().startCrew(company_name='LatentBridge', person_name='Hema Gandhi')'''

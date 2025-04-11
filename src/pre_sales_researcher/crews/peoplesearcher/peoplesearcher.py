@@ -52,7 +52,7 @@ class PeopleSearcher:
     def reporting_task(self) -> Task:
         return Task(
             config=self.tasks_config['reporting_task'],
-            output_file= 'About_{person_name}.md'
+            output_file= 'Person_research.md'
         )
     @crew
     def crew(self) -> Crew:
