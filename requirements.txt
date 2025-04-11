@@ -3,3 +3,4 @@ crewai_tools
 load_dotenv
 streamlit
 boto3
+pysqlite3
